@@ -22,7 +22,9 @@ files.extend([
     ])
 
 imgui.add(jmake.fullpath(files))
-imgui.include(jmake.fullpath(['.', 'lib/glfw/include']))
+
+host = jmake.Host()
+imgui.include(jmake.fullpath('.') + jmake.rootpath(f'{host.lib}/glfw/include'))
 
 imgui.export(includes=jmake.fullpath('.'))
 
