@@ -30,6 +30,7 @@ JSON/
 
 ## Commonly used CMake directories
 build*/
+bin/
 
 ## Xcode artifacts
 project.xcworkspace
