@@ -21,7 +21,7 @@ files.extend([
     'backends/imgui_impl_dx12.cpp'
     ])
 
-imgui.add(jmake.fullpath(files))
+imgui.add(files)
 
 host = jmake.Host()
 imgui.include(jmake.fullpath('.') + jmake.rootpath(f'{host.lib}/glfw/include'))
