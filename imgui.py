@@ -25,8 +25,10 @@ imgui.add(jmake.fullpath(files))
 
 host = jmake.Host()
 imgui.include(jmake.fullpath('.') + jmake.rootpath(f'{host.lib}/glfw/include'))
-
 imgui.export(includes=jmake.fullpath('.'))
+
+debug = imgui.filter('debug')
+debug['debug'] = True
 
 workspace.add(imgui)
 
