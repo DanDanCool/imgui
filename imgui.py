@@ -9,7 +9,7 @@ glfw = jmake.package('glfw', 'https://github.com/DanDanCool/glfw')
 imgui = jmake.Project('imgui', jmake.Target.STATIC_LIBRARY)
 
 files = jmake.glob('.', ['*.h', '*.cpp'])
-files.extend([
+files.extend(jmake.fullpath([
     'backends/imgui_impl_glfw.h',
     'backends/imgui_impl_glfw.cpp',
     'backends/imgui_impl_opengl3.h',
@@ -19,7 +19,7 @@ files.extend([
     'backends/imgui_impl_dx11.cpp',
     'backends/imgui_impl_dx12.h',
     'backends/imgui_impl_dx12.cpp'
-    ])
+    ]))
 
 imgui.add(files)
 
